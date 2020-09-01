@@ -80,7 +80,7 @@ ggplot(data_gabung_clean,aes(Tanggal, Curah_Hujan,col=Nama_Stasiun)) +
        y="Curah Hujan (mm)",
        x="Waktu") + 
   theme_bw(base_size = 10)
-
+  
 # buat pivot (long tabel pivot)
 
 data_pivot <- pivot_longer(test_join2,-Tanggal,
