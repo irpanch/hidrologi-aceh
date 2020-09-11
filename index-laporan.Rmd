@@ -1,0 +1,31 @@
+---
+title: "test-reference-file"
+author: "Irpan Chumaedi"
+date: "9/3/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(readr)
+knitr::read_chunk('visualize-and-grouping-data.R')
+```
+
+## Contoh Referencing dari file R
+
+```{r, data-hujan, include=FALSE, echo=FALSE, message=FALSE}
+```
+
+```{r, plot-gabung, echo=FALSE}
+
+```
+
+
+```{r, plot-pisah, echo=FALSE}
+```
+
+
+
+
+
+
