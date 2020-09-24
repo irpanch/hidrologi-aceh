@@ -42,6 +42,7 @@ ggplot(data,aes(Tanggal, Curah_Hujan,col=Nama_Stasiun)) +
   facet_wrap(~Nama_Stasiun)+
   theme_update(plot.title=element_text(hjust=0.5))+
   theme_update(plot.subtitle=element_text(hjust=0.5))+
-  theme_update(axis.title.y=element_text(angle=90)) 
+  theme_update(axis.title.y=element_text(angle=90)) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 
