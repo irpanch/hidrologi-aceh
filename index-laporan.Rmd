@@ -1,8 +1,14 @@
 ---
-title: "test-reference-file"
+title: "Analisa Hidrologi Bendung Panthe Long - Aceh"
 author: "Irpan Chumaedi"
-date: "9/3/2020"
-output: html_document
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    toc: yes
+    number_section: true
 ---
 
 ```{r setup, include=FALSE}
@@ -11,8 +17,21 @@ library(readr)
 knitr::read_chunk('visualize-and-grouping-data.R')
 ```
 
-## Contoh Referencing dari file R
+```{r, nama-lokasi-proyek, echo=FALSE}
+# nama-nama unik pada proyek yang dibuat
+subdas <- "Bendung Panthe Long"
 
+```
+
+
+# Sub DAS  `r subdas` 
+Untuk dapat menghitung debit banjir dan debit andalan, diperlukan 2 (dua) inputan data utama. Input yang pertama adalah karakteristik dari sub DAS yang ditinjau seperti luasan, panjang sungai, dan kemiringan sungai. Kemudian input kedua yang diperlukan adalah curah hujan rencana. 
+
+Untuk data karakteristik sub DAS diperoleh dari deliniasi peta rupa bumi Indonesia (RBI) dan peta Wilayah Sungai dari Permen PUPR No. 4 Tahun 2015 Tentang Kriteria dan Pembagian Wilayah Sungai. Hasil deliniasi untuk lokasi yang ditinjau ditampilkan pada gambar berikut
+
+
+
+# Data Hujan
 ```{r, data-hujan, include=FALSE, echo=FALSE, message=FALSE}
 ```
 
@@ -24,6 +43,31 @@ knitr::read_chunk('visualize-and-grouping-data.R')
 ```{r, plot-pisah, echo=FALSE}
 ```
 
+# Pemeriksaan Data Curah Hujan
+## Pemeriksaan Outlier
+## Uji Konsistensi
+# Curah Hujan Wilayah
+# Debit Banjir
+## Bagan Alir Perhitungan Debit Banjir Rencana
+## Analisa Frekuensi
+## Uji Pemilihan Distribusi Frekuensi
+## Distribusi Hujan
+## Koefisien Pengaliran
+## Hasil Perhitungan Debit Banjir
+# Debit Andalan
+## Evapotranspirasi
+## Model FJ. Mock
+# Kebutuhan Air Irigasi
+##	Penggantian Lapisan Air (Water Layer Replacement)
+##	Perkolasi (P)
+##	Curah hujan efektif (Re)
+##	Evapotranspirasi Acuan (ETo)
+##	Evapotranspirasi Konsumtif (ETc)
+##	Efisiensi Irigasi
+##	Kebutuhan Air Tanaman
+##	Pola Tanam
+##	Kebutuhan Air pada Bangunan Pengambilan (Intake)
+#	Kesimpulan
 
 
 
