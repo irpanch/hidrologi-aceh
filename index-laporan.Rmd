@@ -22,9 +22,11 @@ knitr::read_chunk('visualize-and-grouping-data.R')
 ```{r, nama-lokasi-proyek, echo=FALSE}
 # nama-nama unik pada proyek yang dibuat
 subdas <- "Bendung Panthe Long"
-Sta_1 <- "Pegasing"
-Sta_2 <- "Pintu Rime Gayo"
-Sta_3 <- "Silih Nara"
+jumlah_pos <- 3
+jumlah_pos_text <- "tiga"
+Sta_1 <- "Stasiun Hujan Pegasing"
+Sta_2 <- "Stasiun Hujan Pintu Rime Gayo"
+Sta_3 <- "Stasiun Hujan Silih Nara"
 
 ```
 
@@ -43,6 +45,14 @@ knitr::include_graphics('gambar/subdas-all.png')
 ```
 
 # Data Hujan
+
+Data hujan yang digunakan bersumber dari BMKG. Di sekitar area sub DAS terdapat `r jumlah_pos` (`r jumlah_pos_text`) stasiun hujan yang terdekat. Yaitu `r Sta_1`, `r Sta_2` dan `r Sta_3`. Berikut ditampilkan posisi stasiun hujan terhadap sub DAS (Gambar \@ref(fig:lokasi-pos)) serta tabel data hujan pada masing-masing stasiun tersebut.
+
+```{r lokasi-pos, fig.cap="Posisi Stasiun Hujan Terhadap Sub DAS",fig.align="center"}
+library(knitr)
+knitr::include_graphics('gambar/lokasi-pos-hujan.png')
+
+```
 
 Lihat Gambar \@ref(fig:plot-gabung) dan Gambar \@ref(fig:plot-pisah).
 
