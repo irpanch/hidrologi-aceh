@@ -22,6 +22,9 @@ knitr::read_chunk('visualize-and-grouping-data.R')
 ```{r, nama-lokasi-proyek, echo=FALSE}
 # nama-nama unik pada proyek yang dibuat
 subdas <- "Bendung Panthe Long"
+Sta_1 <- "Pegasing"
+Sta_2 <- "Pintu Rime Gayo"
+Sta_3 <- "Silih Nara"
 
 ```
 
