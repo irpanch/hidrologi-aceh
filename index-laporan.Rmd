@@ -1,7 +1,7 @@
 ---
 title: "Analisa Hidrologi Bendung Panthe Long - Aceh"
 author: "Irpan Chumaedi"
-date: "`r Sys.Date()`"
+date: "`r format(Sys.time(),'%d %B, %Y')`"
 output:
   bookdown::html_document2:
     toc_float:
@@ -68,6 +68,10 @@ Lihat Gambar \@ref(fig:plot-gabung) dan Gambar \@ref(fig:plot-pisah).
 ```
 
 ```{r, plot-pisah, echo=FALSE, fig.cap="(ref:data-hujan-pisah)"}
+```
+
+```{r, CurahHujan_sta1, echo=FALSE, fig.cap="Hujan Max"}
+
 ```
 
 # Pemeriksaan Data Curah Hujan
