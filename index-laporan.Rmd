@@ -60,6 +60,8 @@ Lihat Gambar \@ref(fig:plot-gabung) dan Gambar \@ref(fig:plot-pisah).
 
 (ref:data-hujan-pisah) Overlay Plotting Data Hujan Pada Masing-masing Pos Hujan Terdekat di Sub DAS `r subdas`
 
+(ref:hujan-max-sta1) Rekapitulasi Curah Hujan Harian Maksimum `r Sta_1`
+
 ```{r, data-hujan, include=FALSE}
 ```
 
@@ -70,7 +72,7 @@ Lihat Gambar \@ref(fig:plot-gabung) dan Gambar \@ref(fig:plot-pisah).
 ```{r, plot-pisah, echo=FALSE, fig.cap="(ref:data-hujan-pisah)"}
 ```
 
-```{r, CurahHujan_sta1, echo=FALSE, fig.cap="Hujan Max"}
+```{r, CurahHujan_sta1, message=FALSE, warning=FALSE, caption="(ref:hujan-max-sta1)", echo=FALSE}
 
 ```
 

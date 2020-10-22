@@ -81,6 +81,10 @@ pivot_sta1$defineCalculation(calculationName="Max",summariseExpression="max(Cura
 # pivot_sta1$renderPivot()
 pivot_sta1$evaluatePivot()
 sta1_df <- pivot_sta1$asDataFrame()
-sta1_df
+kable(
+  sta1_df, booktabs=TRUE,
+  caption= 'Hujan Max'
+)
+
 
 
