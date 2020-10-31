@@ -72,8 +72,7 @@ Lihat Gambar \@ref(fig:plot-gabung) dan Gambar \@ref(fig:plot-pisah).
 ```{r, plot-pisah, echo=FALSE, fig.cap="(ref:data-hujan-pisah)"}
 ```
 
-```{r, CurahHujan_sta1, message=FALSE, warning=FALSE, caption="(ref:hujan-max-sta1)", echo=FALSE}
-
+```{r, jumlah_bulanan_sta1, echo=FALSE, caption="(ref:data-hujan-pisah)"}
 ```
 
 # Pemeriksaan Data Curah Hujan

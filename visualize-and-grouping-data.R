@@ -54,37 +54,24 @@ data$MONTH <- as.numeric(format(data$Tanggal,"%m"))
 data$Bulan <- month.abb[data$MONTH]
 data <- data[,1:7]
 
-View(data)
-
-# Jumlah curah hujan bulanan
-
+# pivot table dengan reshape2, more simple than pivottabler
+## ---- jumlah_bulanan_sta1
+library(reshape2)
+library(kableExtra)
 nama_sta1 <- "Pegasing"
-
+data_sta1 <- subset(data,data$Nama_Stasiun == nama_sta1)
+data_melt <- melt(data_sta1,id=c("YEAR","Bulan"),
+                  measure="Curah_Hujan",value.name = "Hujan")
+data_pivot <- dcast(data_melt,YEAR~Bulan,
+                    margins = T,fun.aggregate = sum,
+                    value.var = "Hujan")
+data_pivot2 <- data_pivot[,c(1,6,5,9,2,10,8,7,3,13,12,11,4,14)]
+kable(data_pivot2, booktabs=TRUE) %>% 
+  kable_styling(position = "center")
 # max curah hujan harian
 
-## ---- CurahHujan_sta1
-library(pivottabler)
-data_sta1 <- subset(data,data$Nama_Stasiun == nama_sta1)
-pivot_sta1 <- PivotTable$new()
-pivot_sta1$addData(data_sta1)
-pivot_sta1$addColumnDataGroups("Bulan")
-pivot_sta1$sortColumnDataGroups(levelNumber=1,orderBy="customByValue",
-                                sortOrder="asc",
-                                customOrder=c("Jan","Feb","Mar",
-                                              "Apr","May","Jun",
-                                              "Jul","Aug","Sep",
-                                              "Oct", "Nov","Dec"))
-pivot_sta1$addRowDataGroups("YEAR")
-pivot_sta1$defineCalculation(calculationName="Max",summariseExpression="max(Curah_Hujan)")
-# cells <- pivot_sta1$findCells(minValue=100,totals="exclude")
-# pivot_sta1$setStyling(cells=cells, declaration=list("background-color"="#FFC7CE", "color"="#9C0006"))
-# pivot_sta1$renderPivot()
-pivot_sta1$evaluatePivot()
-sta1_df <- pivot_sta1$asDataFrame()
-kable(
-  sta1_df, booktabs=TRUE,
-  caption= 'Hujan Max'
-)
+
+
 
 
 
